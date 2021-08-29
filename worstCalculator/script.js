@@ -2,6 +2,7 @@
 let sum;
 
 window.addEventListener("DOMContentLoaded", clickCalculate);
+document.querySelector("#clear").addEventListener("click", clearResult);
 
 function clickCalculate() {
   console.log("calculating");
@@ -29,13 +30,28 @@ function clickCalculate() {
 function roundNumber() {
   console.log("roundnumber");
   const checked = document.getElementById("doround").checked;
-  if (checked === true) {
-    const decimal = document.getElementById("decimals").value;
-    console.log(sum.toFixed(decimal));
+  const decimal = document.getElementById("decimals").value;
 
-    let x = document.querySelector("li");
-    let y = document.createTextNode(sum);
-    x.appendChild(y);
-    document.getElementById("results").appendChild(y);
+  ul = document.getElementById("results");
+  li = document.createElement("li");
+
+  if (checked === true) {
+    console.log(sum.toFixed(decimal));
+    li.appendChild(document.createTextNode(sum.toFixed(decimal)));
+    ul.appendChild(li);
+  } else {
+    li.appendChild(document.createTextNode(sum));
+    ul.appendChild(li);
   }
+}
+
+function clearResult() {
+  element = document.querySelector("ul");
+  // document.parentNode.removeChild(element);
+  ul = document.getElementById("results");
+  li = document.createElement("li");
+
+  document.querySelector("ul").innerHTML = "";
+  li.appendChild(document.createTextNode("0"));
+  ul.appendChild(li);
 }
