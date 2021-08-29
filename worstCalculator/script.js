@@ -1,6 +1,8 @@
 "usestrict";
 let sum;
 
+// load
+
 window.addEventListener("DOMContentLoaded", clickCalculate);
 document.querySelector("#clear").addEventListener("click", clearResult);
 
