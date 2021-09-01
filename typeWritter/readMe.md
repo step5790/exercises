@@ -1,4 +1,4 @@
-GitHub Link: https://step5790.github.io/exercises/typeWritter/index.html
+GitHub Link: https://step5790.github.io/exercises/typeWritter/typewriter.html
 
 Typewriter
 Create an effect for a web-page, where text is being written, one character at a time, while the user watches. Sort of like this animation shows:
