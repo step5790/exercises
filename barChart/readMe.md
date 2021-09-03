@@ -1,3 +1,5 @@
+GitHub Link: https://step5790.github.io/exercises/barChart/barChart.html
+
 Bar Chart
 Imagine a webpage that displays the current number of customers in a queue.
 
